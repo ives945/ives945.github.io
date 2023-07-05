@@ -1,0 +1,327 @@
+@charset "UTF-8";
+
+/* 共通部分 
+------------------------------------------*/
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Noto sans-serif", "New Times Roman",sans-serif ; /* 字型 */
+    line-height: 1.7; /*設定文字行高*/
+    color:rgb(255, 255, 255);
+}
+a {
+    text-decoration: none; /*<a>標籤文字預設有底線，none為去除底線*/
+}
+img {
+    max-width: 100%; /*設定影像寬度上限*/
+}
+
+/* HEADER 
+------------------------------------------*/
+
+.logo { 
+    width: 210px; /*logo影像寬度*/
+    margin-top: 20px; /*上方留白距離*/
+}
+
+.main-nav{
+    display: flex; /*並排元素*/
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    color:rgb(255, 255, 255);
+}
+.main-nav a:hover {
+    color: rgb(133, 133, 133);
+}
+.page-header {
+    display: flex;
+    justify-content: space-between; /*設定內容對齊方式*/
+}
+.wrapper {
+    max-width: 1100px; /* 設定最大寬度為px */
+    margin: 0 auto; /*設定置中對齊*/
+    padding: 0 4%; /*設定內側留空白 配合窄畫面*/
+}
+
+/* Home 
+------------------------------------------*/
+.home-content {
+    text-align: center; /*設定內容置中對齊，上方留空白*/
+    margin-top: 10%; 
+}
+.home-content p {
+    font-size:1.125rem; /*設定<p>標籤的文字大小與留白*/
+    margin: 7px 0 42px;
+}
+
+/* 標題 */
+.page-title{
+    font-size: 4rem;
+    font-family: "Philsopher", serif;
+    text-transform: uppercase; /*設定字母大小寫*/
+    font-weight: normal;
+}
+
+/* 按鈕 */
+.button {
+    font-size: 1.2rem;
+    background: rgba(134, 134, 134, 0.779);
+    color: #ffffff; 
+    border-radius: 2px;
+    padding: 18px 32px;
+}
+.button:hover {
+    background: #4c4c4c;
+}
+
+/* 大型背景影像 */
+.big-bg {
+    background-size: cover; /*維持影像的情況下擴大填滿整個畫面*/
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+#home {
+    background-image: url(../images/main-bg.JPG); /*設定背景影像*/
+    background-color: #00000070; /*設定要疊上的顏色*/
+    background-blend-mode:overlay; /*設定混合模式*/
+    min-height: 100vh; /*設定背景影像高度*/
+}
+#home .page-tilte{
+    text-transform: none; /*控制英文字母大小寫*/
+}
+
+/* BLOG 
+------------------------------------------*/
+
+#blog {
+    background-image: url(../images/blog-bg.JPG);
+    height: 270px;
+    margin-bottom: 40px;
+}
+#blog .page-title {
+    text-align: center;
+}
+
+/*欄位配置
+------------------------*/
+/*文章部分*/
+article {
+    width:60%;
+    order:2; 
+}
+/*邊欄*/
+aside {
+    width:22%;
+    order:3;
+}
+/*banner*/
+.da {
+    order:1;
+}
+
+/*Flexbox-blog*/
+.blog-contents {
+    color:#000000; /*內文字體顏色*/
+    display: flex;
+    justify-content: space-between; /*flexbox與左右對齊設定*/
+    margin-bottom: 50px; /*設定與下方元素距離為50px*/
+}
+
+/*主要內容區塊
+------------------------*/
+
+/*設定日期的裝飾*/
+.post-info { 
+    position:relative; /*設定依相對位置配置*/
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+.post-date {
+    background: #383737;
+    border-radius: 5%;
+    color:#fff;
+    width: 100px;
+    height: 100px;
+    font-size:1.625rem;
+    text-align: center;
+    position:absolute; /*設定以外層「.post.info」元素為基準的相對位置*/
+    top: 0;
+    padding-top: 10px;
+}
+.post-date span {
+    font-size:1rem;
+    border-top:1px rgba(255,255,255,.5) solid; /*日期文字上方加入水平線及不透明設定*/
+    padding-top:6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+/*調整標題與類別的樣式*/
+.post-title {
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size:2rem;
+    font-weight: normal;
+}
+.post-title,
+.post-cat {
+    margin-left: 120px;
+}
+/*描述影像和內文*/
+article img {
+    margin-bottom: 20px;
+}
+article p {
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+/*右側邊欄區塊
+------------------------*/
+.sub-title {
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #4c4c4c solid; /*加上一條底線*/
+    font-weight: normal;
+}
+aside p {
+    font-size: 14px;
+    text-align: justify;
+    padding: 12px 10px;
+}
+
+/*美化類別清單的外觀*/
+.sub-menu {
+    margin-bottom: 60px;
+    list-style: none; /*隱藏清單項目的黑色圓點符號*/
+}
+.sub-menu li {
+    border-bottom: 1px #bdbdbd solid; /*每個項目下方加上淺灰色底線*/
+}
+.sub-menu a {
+    color: #432;
+    padding: 10px;
+    display: block; /*將連結範圍擴大至整個項目*/
+}
+.sub-menu a:hover {
+    color: #a4a4a4; /*移入游標時的效果*/
+}
+
+
+/* WORK 
+------------------------------------------*/
+#work {
+    background-image: url(../images/work-bg.JPG); /*設定背景影像*/
+    min-height: 130vh; /*設定背景影像高度*/
+    margin-bottom: 40px;
+}
+.work-content {
+    max-width: 560px;
+    margin-top: 10%;
+}
+.work-content .page-title {
+    text-align: center;
+}
+.work-content p {
+    font-size: 1.125rem;
+    margin: 10px 0 0;
+}
+
+.grid {
+    display: grid;
+    gap: 26px; /* 設定間隔寬度*/
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* repeat(auto-fit,minmax(最小值,最大值)*/
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+/* 頁尾 
+------------------------------------------*/
+footer {
+    background:#000000;
+    text-align: center;
+    padding:  26px 0;
+}
+footer p{
+    color: #ffffff ;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 600px) {
+    h1{
+        color: #0bd;
+    }
+}
+
+/* 手機版 
+------------------------------------------*/
+@media (max-width: 600px) {
+    .page-tilte {
+        font-size: 2.5rem;
+    }
+    /*HEADER*/
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 0 20px;
+    }
+    /* HOME */
+    .home-content {
+        margin-top: 20%;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Blog*/
+    .blog-contents {
+        flex-direction: column;
+    }
+    .article,
+    aside {
+        width: 100%;
+    }
+    #blog .page-tilte {
+        margin-top: 30px;
+    }
+    aside {
+        margin-top: 60px;
+    }
+    .post-info {
+        margin-bottom: 30px;
+    }
+    .post-date {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    .post-date span {
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+    .post-title {
+        font-size: 1.375rem;
+    }
+    .post-cat {
+        font-size: 0.875rem;
+        margin-top: 10px;
+    }
+    .post-title,
+    .post-cat {
+        margin-left: 80px;
+    }
+    /* WORK */
+    .menu-content {
+        margin-top: 20%;
+    }
+}
