@@ -76,7 +76,7 @@ img {
     background: rgba(134, 134, 134, 0.779);
     color: #ffffff; 
     border-radius: 2px;
-    padding: 18px 32px;
+    padding: 20px 32px;
 }
 .button:hover {
     background: #4c4c4c;
@@ -243,6 +243,85 @@ aside p {
     margin-bottom: 50px;
 }
 
+/* CONTACT 
+------------------------------------------*/
+#contact {
+    background-image: url(../images/contact-bg.JPG);
+    min-height: 130vh;
+}
+
+/*表單*/
+form div {
+    margin-bottom: 14px;
+}
+label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    display: block;
+}
+input#submit.button{
+    width: 120px;
+}
+input[type="text"], /*設定欄位屬性*/
+input[type="email"],
+textarea {
+    background-color: rgba(255,255,255,.5);
+    border: 1px #fff solid;
+    border-radius:5px ;
+    padding: 10px;
+    font-size:1rem;
+}
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    max-width: 240px;
+}
+textarea {
+    width:100%;
+    max-width: 480px;
+    height: 6rem;
+}
+input [type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* 店家資料、地圖 */
+#location {
+    color:#000000;
+    padding: 4% 0;
+}
+#location .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.location-info {
+    width:22%;
+}
+.location-info p {
+    padding: 12px 10px;
+}
+.location-map {
+    width:74%;
+}
+
+/* SNS */
+#sns {
+    background: #000000;
+    padding: 4% 0;
+}
+#sns .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+#sns .sub-title{
+    margin-bottom: 30px;
+}
+.sns-box {
+    width: 30%;
+}
+
 /* 頁尾 
 ------------------------------------------*/
 footer {
@@ -324,4 +403,30 @@ footer p{
     .menu-content {
         margin-top: 20%;
     }
+    /*CONTACT*/
+    #contact .page-title {
+        margin-top:40px;
+    }
+
+    /*表單*/
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        max-width: 100%;
+    }
+
+    /*商店資料、地圖/ SNS*/
+    #location .wrapper,
+    #sns .wrapper {
+        flex-direction: column;
+    }
+    .location-info,
+    .location-map,
+    .sns-box{
+        width: 100%;
+    }
+    .sns-box{
+        margin-bottom: 30px;
+    }
+
 }
