@@ -89,7 +89,7 @@ img {
     background-repeat: no-repeat;
 }
 #home {
-    background-image: url(../images/main-bg.JPG); /*設定背景影像*/
+    background-image: url(https://images.plurk.com/5fUtXXmikHg3KAfYZf6zcb.jpg); /*設定背景影像*/
     background-color: #00000070; /*設定要疊上的顏色*/
     background-blend-mode:overlay; /*設定混合模式*/
     min-height: 100vh; /*設定背景影像高度*/
